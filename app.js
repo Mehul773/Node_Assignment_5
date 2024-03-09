@@ -3,10 +3,12 @@ const bodyParser = require("body-parser");
 const homeRoute = require("./routes/homeRoute");
 const userRoute = require("./routes/userRoute");
 const createRoute = require("./routes/createRoute");
+const UserModel = require("./models/userModel");
 
 const app = express();
 const PORT = 3000;
 
+UserModel.createUsersTable();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", "views");
