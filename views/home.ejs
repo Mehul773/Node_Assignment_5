@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Users</title>
+    <title>Home</title>
     <style>
       /* Styles for body */
       body {
@@ -13,26 +13,10 @@
         background-color: #f0f0f0;
       }
 
-      /* Styles for h2 */
-      h2 {
+      /* Styles for h1 */
+      h1 {
         text-align: center;
         color: #333;
-      }
-
-      /* Styles for users list */
-      ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 20px auto;
-        max-width: 400px;
-      }
-
-      li {
-        background-color: #fff;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
       }
 
       /* Styles for links */
@@ -54,16 +38,8 @@
     </style>
   </head>
   <body>
-    <h2>Users:</h2>
-    <% if (users.length > 0) { %>
-    <ul>
-      <% users.forEach(function(user) { %>
-      <li><%= user %></li>
-      <% }); %>
-    </ul>
-    <% } else { %>
-    <p style="text-align: center; color: #333">No users found</p>
-    <% } %>
-    <div><a href="/create">Create user</a></div>
+    <h1>Welcome to User Management System!</h1>
+    <a href="/users">View Users</a>
+    <a href="/create">Create User</a>
   </body>
 </html>
